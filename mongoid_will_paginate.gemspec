@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
+  s.add_development_dependency "rails"
   
   s.add_runtime_dependency "mongoid", [">= 2.1.0"]
   s.add_runtime_dependency "will_paginate", [">= 3.0.0"]

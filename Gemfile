@@ -4,7 +4,7 @@ gemspec
 
 group :development do
   gem 'rails', '>= 3.1.0'
-  gem 'bson_ext', '~> 1.3'
+  gem 'bson_ext', '~> 1.4'
 end
 
 group :test do
