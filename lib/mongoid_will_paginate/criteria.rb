@@ -2,9 +2,11 @@ require 'will_paginate/collection'
 
 module MongoidWillPaginate
   module Criteria
-    extend ActiveSupport::Concern
+    def self.extended(base)
+      base.include InstanceMethods
+    end
 
-    included do
+    module InstanceMethods
       def paginate(options = {})
         page     = options[:page] || 1
         per_page = options[:per_page] || WillPaginate.per_page
