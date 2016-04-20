@@ -7,6 +7,13 @@ module MongoidWillPaginate
     end
 
     module InstanceMethods
+      # Paginates criteria depending on the options given
+      #
+      # @param [Hash] options pagination options
+      # @option options [Fixnum] :page page number
+      # @option options [Fixnum] :per_page number of entries per page
+      # @option options [Fixnum] :total_entries total number of entries
+      # @return [WillPaginate::Collection] paginated collection of entries
       def paginate(options = {})
         page     = options[:page] || 1
         per_page = options[:per_page] || WillPaginate.per_page
