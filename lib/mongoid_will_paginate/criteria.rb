@@ -15,9 +15,9 @@ module MongoidWillPaginate
       # @option options [Fixnum] :total_entries total number of entries
       # @return [WillPaginate::Collection] paginated collection of entries
       def paginate(options = {})
-        page     = options[:page] || 1
+        page = options[:page] || 1
         per_page = options[:per_page] || WillPaginate.per_page
-        total    = options[:total_entries] || self.count
+        total = options[:total_entries] || self.count
 
         WillPaginate::Collection.create(page, per_page, total) do |pager|
           pager.replace self.skip(pager.offset).limit(pager.per_page).to_a
