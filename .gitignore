@@ -1,5 +1,7 @@
 *.gem
 .bundle
 pkg/*
+log
 .idea
 .gems
+spec/examples.txt
