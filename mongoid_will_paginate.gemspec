@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 require "mongoid_will_paginate/version"
 
@@ -17,10 +16,9 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "rails"
-  
-  s.add_runtime_dependency "mongoid", [">= 2.1.0"]
+  s.add_development_dependency "rspec-rails", [">= 3.4.0"]
+  s.add_development_dependency "rails", [">= 3.0.0"]
+
+  s.add_runtime_dependency "mongoid", [">= 5.0.0"]
   s.add_runtime_dependency "will_paginate", [">= 3.0.0"]
 end
