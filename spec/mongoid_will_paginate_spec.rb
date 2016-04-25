@@ -8,7 +8,7 @@ RSpec.describe MongoidWillPaginate::Criteria do
 
   describe '#paginate' do
     let!(:docs) do
-      15.times.map { Document.create(title: 'document title') }
+      Array.new(15) { Document.create(title: 'document title') }
     end
     let(:criteria) { Document.where(title: 'document title') }
 

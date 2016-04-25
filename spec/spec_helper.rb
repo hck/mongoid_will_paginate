@@ -38,6 +38,6 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 
   config.before(:each) do
-    Mongoid.default_client.collections.select{ |c| c.name !~ /system/ }.each(&:drop)
+    Mongoid.default_client.collections.select { |c| c.name !~ /system/ }.each(&:drop)
   end
 end
