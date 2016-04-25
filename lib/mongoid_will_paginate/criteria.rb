@@ -1,11 +1,13 @@
 require 'will_paginate/collection'
 
 module MongoidWillPaginate
+  # Criteria module which is used to extend Mongoid::Criteria class
   module Criteria
     def self.extended(base)
       base.include InstanceMethods
     end
 
+    # Instance methods of Criteria
     module InstanceMethods
       # Paginates criteria depending on the options given
       #
